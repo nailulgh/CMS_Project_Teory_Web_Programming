@@ -205,4 +205,4 @@ Deadline    : Rabu, 29 Mei 2026 | Pukul 23.59 WIB
 ---
 
 > Proyek ini dibuat sebagai bagian dari pemenuhan tugas UTS Mata Kuliah Pemrograman Web.
-# -Sistem-Manajemen-Blog-CMS-_Teory_Web_Programming
+# Sistem-Manajemen-Blog-CMS_ Project-UTS-Teory-Web-Progr amming
