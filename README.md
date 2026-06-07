@@ -36,9 +36,9 @@ Repositori ini berisi proyek **Sistem Manajemen Blog (CMS)** untuk mata kuliah *
 | **Mata Kuliah** | Pemrograman Web |
 | **Dosen** | A'la Syauqi, M.Kom. |
 | **Semester** | Genap 2025/2026 |
-| **Nama Lengkap** | *[Isi nama lengkap Anda]* |
-| **NIM** | *[Isi NIM Anda]* |
-| **Video Demonstrasi** | *[Tautan YouTube — publik atau unlisted]* |
+| **Nama Lengkap** | Muhammad Nailul Ghufron Majid |
+| **NIM** | 240605110160 |
+| **Video Demonstrasi** | link |
 
 ---
 
@@ -140,7 +140,7 @@ Seluruh operasi CRUD berjalan **asynchronous** via Fetch API. Halaman tidak di-r
 Pengunjung (tanpa login)          Penulis (setelah login)
         │                                  │
         ▼                                  ▼
-  PostPublicController            ArtikelController
+  PublicController                ArtikelController
   (/, /artikel/{id})              PenulisController
                                   KategoriArtikelController
         │                                  │
@@ -155,7 +155,7 @@ Pengunjung (tanpa login)          Penulis (setelah login)
 
 **Pemisahan tanggung jawab (UAS):**
 
-- **Controller publik** (`PostPublicController`) terpisah dari controller CMS.
+- **Controller publik** (`PublicController`) terpisah dari controller CMS.
 - **Layout Blade publik** (`layouts/public.blade.php`) terpisah dari layout CMS (`layouts/app.blade.php`).
 - **Route publik** tidak dilindungi middleware `auth`; route CMS dilindungi.
 
@@ -285,7 +285,7 @@ Dapat diakses **tanpa login** oleh siapa saja.
 | **Beranda** | `/` | Menampilkan **5 artikel terbaru** + widget kategori di sidebar |
 | **Filter kategori** | `/?kategori={id}` | Artikel difilter berdasarkan kategori yang diklik |
 | **Detail artikel** | `/artikel/{id}` | Isi lengkap artikel + **5 artikel terkait** dari kategori yang sama |
-| **Navigasi** | — | Tombol "Kelanjutannya" ke detail, "Kembali ke Beranda" ke beranda |
+| **Navigasi** | — | Tombol "Baca Selengkapnya" ke detail, dan navigasi "Kembali ke Beranda" (termasuk pada halaman login) |
 
 ### Teknologi
 
@@ -305,7 +305,7 @@ Dapat diakses **tanpa login** oleh siapa saja.
 ```
 app/
 ├── Http/Controllers/
-│   ├── PostPublicController.php    # Halaman publik (UAS)
+│   ├── PublicController.php        # Halaman publik (UAS)
 │   ├── LoginController.php         # Autentikasi
 │   ├── DashboardController.php     # Dashboard CMS
 │   ├── ArtikelController.php       # CRUD artikel
@@ -479,8 +479,8 @@ URL login: http://localhost:8000/login
 
 | Method | URI | Controller | Nama Route |
 |---|---|---|---|
-| GET | `/` | `PostPublicController@index` | `public.index` |
-| GET | `/artikel/{id}` | `PostPublicController@show` | `public.show` |
+| GET | `/` | `PublicController@index` | `public.index` |
+| GET | `/artikel/{id}` | `PublicController@show` | `public.show` |
 
 **Autentikasi:**
 
@@ -581,13 +581,13 @@ Ubah mapping port di `docker-compose.yml` jika port 8080, 8000, 3306, atau 3307 
 
 ### Gambar tidak tampil (Laravel CMS)
 
-Jalankan symbolic link storage:
+Jalankan symbolic link storage dari root project Laravel Anda:
 
 ```bash
 php artisan storage:link
 ```
 
-Gambar artikel CMS disimpan di `storage/app/public/gambar/` dan diakses via `/storage/gambar/`. Foto penulis di `/storage/foto/`.
+Gambar artikel CMS disimpan di `storage/app/public/gambar/` dan diakses via `/storage/gambar/`. Foto penulis di `/storage/foto/`. (Catatan: Pastikan Anda memanggil path folder dengan benar pada View).
 
 ### Migration error
 
@@ -613,5 +613,3 @@ Pastikan service `db` sudah healthy sebelum `app` diakses. Periksa bahwa `koneks
 Proyek ini dibuat sebagai bagian dari pemenuhan tugas mata kuliah **Pemrograman Web**. Kode Laravel mengikuti [MIT License](https://opensource.org/licenses/MIT).
 
 ---
-
-> **Catatan:** Ganti placeholder `[Isi nama lengkap Anda]`, `[Isi NIM Anda]`, dan `[Tautan YouTube]` di bagian [Informasi Proyek](#informasi-proyek) sebelum mengumpulkan tugas.
