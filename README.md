@@ -1,3 +1,5 @@
+<div align="center">
+
 # Sistem Manajemen Blog (CMS)
 
 Repositori ini berisi proyek **Sistem Manajemen Blog (CMS)** untuk mata kuliah **Pemrograman Web** — dari implementasi PHP native (UTS) hingga pengembangan berbasis **Laravel** dengan halaman publik pengunjung (UAS).
@@ -6,6 +8,8 @@ Repositori ini berisi proyek **Sistem Manajemen Blog (CMS)** untuk mata kuliah *
 ![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20?style=flat-square&logo=laravel&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+</div>
 
 ---
 
