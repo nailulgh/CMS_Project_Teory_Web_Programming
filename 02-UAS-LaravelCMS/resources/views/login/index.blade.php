@@ -81,9 +81,14 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-success w-100">
+                <button type="submit" class="btn btn-success w-100 mb-3">
                     Masuk
                 </button>
+                <div class="text-center mt-2">
+                    <a href="{{ route('public.index') }}" class="text-decoration-none text-secondary" style="font-size: 13px;">
+                        &larr; Kembali ke Beranda Publik
+                    </a>
+                </div>
             </form>
         </div>
     </div>

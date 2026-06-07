@@ -7,10 +7,12 @@ use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\PenulisController;
 use App\Http\Controllers\KategoriArtikelController;
 
-// Redirect halaman utama ke login
-Route::get('/', function () {
-    return redirect()->route('login');
-});
+use App\Http\Controllers\PublicController;
+
+// Route Halaman Pengunjung Publik
+Route::get('/', [PublicController::class, 'index'])->name('public.index');
+Route::get('/artikel/kategori/{id}', [PublicController::class, 'kategori'])->name('public.kategori');
+Route::get('/artikel/{id}', [PublicController::class, 'show'])->name('public.show')->where('id', '[0-9]+');
 
 // Route untuk halaman login (hanya guest)
 Route::middleware('guest')->group(function () {
