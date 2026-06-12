@@ -97,7 +97,7 @@ CMS_Project_Teory_Web_Programming/
 │   ├── uploads_penulis/           # Foto profil penulis
 │   └── uploads_artikel/           # Gambar artikel
 │
-├── 02-UAS-LaravelCMS/             # Proyek UAS — Laravel CMS + halaman publik
+├── 02-UAS-LaravelCMS/             # Proyek Modul 10 & UAS — Laravel CMS + halaman publik
 │   ├── app/
 │   │   ├── Http/Controllers/      # Controller CMS & publik
 │   │   └── Models/                # Eloquent models
