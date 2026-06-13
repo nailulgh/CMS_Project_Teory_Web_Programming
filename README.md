@@ -37,12 +37,12 @@ Repositori ini berisi proyek **Sistem Manajemen Blog (CMS)** untuk mata kuliah *
 
 | Item | Keterangan |
 |---|---|
-| **Mata Kuliah** | Pemrograman Web |
+| **Mata Kuliah** | Teori Pemrograman Web |
 | **Dosen** | A'la Syauqi, M.Kom. |
-| **Semester** | Genap 2025/2026 |
+| **Semester** | Genap 2026 |
 | **Nama Lengkap** | Muhammad Nailul Ghufron Majid |
 | **NIM** | 240605110160 |
-| **Video Demonstrasi** | link |
+| **Video Demonstrasi** | https://youtu.be/up2V7h9ZASM?si=Pcig1W9DRPiJcIA6 |
 
 ---
 
